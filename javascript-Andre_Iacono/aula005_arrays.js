@@ -1,4 +1,4 @@
-// Arrays
+// ARRAYS
 var amigos = ["Flávia", "Paulo", "Matheus"];
 console.log(typeof(amigos));
 console.log(amigos);
