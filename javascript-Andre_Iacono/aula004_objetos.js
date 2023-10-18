@@ -4,7 +4,7 @@ var objeto = {
     preco: 30,
     disponibilidade: true,
     cor: "azul"
-}
+};
 
 objeto.cor = "vermelho";
 
