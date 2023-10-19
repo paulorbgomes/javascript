@@ -2,26 +2,34 @@
 
 import input from 'readline-sync';
 
-console.log("Aplicacao de Juros: ");
+console.log("Aplicacao de Juros ...");
 
-// Entrada
-let valor = Number(input.question("Informe o valor devido: R$ "));
-let dias = Number(input.question("Informe quantos dias se passaram desde o vencimento do boleto: "));
-
-// Processamento
-let valorTotal = null;
+// Variaveis globais
 let juros = null;
-if(dias > 15){
-    juros = 10;
-    valorTotal = valor + (valor * juros / 100);
+let valorFinal = null;
+let diasAtraso = null;
+let valorDivida = Number(input.question("Valor da divida: R$ "));
+
+if(valorDivida > 0){
+    diasAtraso = Number(input.question("Informe a quantidade de dias de atraso: "));
+    if(diasAtraso > 0){
+        if(diasAtraso > 15){
+            juros = 10;
+            valorFinal = valorDivida + (valorDivida * juros/100);
+        }
+        else{
+            juros = 5;
+            valorFinal = valorDivida + (valorDivida * juros/100);
+        }
+        console.log("Valor da divida: R$ " + valorDivida);
+        console.log("Quantidade de dias em atraso: " + diasAtraso);
+        console.log("Taxa de juros: " + juros + " %");
+        console.log("Total a pagar (divida + juros): R$ " + valorFinal);
+    }
+    else{
+        console.log("Sua divida nao se encontra em atraso. Valor a pagar: R$ " + valorDivida);
+    }
 }
 else{
-    juros = 5;
-    valorTotal = valor + (valor * juros / 100);
+    console.log("Voce nao possui dividas. Aplicacao encerrada!");
 }
-
-// Saida
-console.log("Valor original da divida: R$ " + valor);
-console.log("Dias de atraso: " + dias);
-console.log("Taxa de juros: " + juros + "%");
-console.log("Valor total com juros: R$ " + valorTotal);
