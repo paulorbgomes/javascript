@@ -2,6 +2,8 @@
 
 import input from 'readline-sync';
 
+console.log("Aplicacao de Juros: ");
+
 // Entrada
 let valor = Number(input.question("Informe o valor devido: R$ "));
 let dias = Number(input.question("Informe quantos dias se passaram desde o vencimento do boleto: "));
