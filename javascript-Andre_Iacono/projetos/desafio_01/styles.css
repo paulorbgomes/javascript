@@ -1,0 +1,14 @@
+#cabecalho{
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+}
+
+h2{
+    color: blue;
+    text-align: center;
+}
+
+#texto{
+    color: red;
+}
