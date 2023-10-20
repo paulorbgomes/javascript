@@ -16,5 +16,5 @@ for(let dados of cursos_idiomas){
     else{
         console.log("Hora/aula inferior a R$15,00");
     }
-    console.log(" ");
+    console.log("\n");
 }
