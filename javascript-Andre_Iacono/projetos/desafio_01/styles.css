@@ -1,14 +1,25 @@
-#cabecalho{
+h1{
     text-align: center;
-    color: blue;
-    font-size: 40px;
 }
 
 h2{
-    color: blue;
+    text-decoration: underline;
     text-align: center;
 }
 
-#texto{
-    color: red;
+p{
+    font-size: 20px;
+    text-align: center;
+}
+
+#nome{
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+}
+
+#curso{
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
 }

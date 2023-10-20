@@ -1,2 +1,5 @@
-let texto = "JavaScript!";
-document.getElementById("texto").innerHTML = texto;
+let nome = "Paulo R. B. Gomes";
+let curso = "JavaScript";
+
+document.getElementById("nome").innerHTML = nome;
+document.getElementById("curso").innerHTML = curso;
