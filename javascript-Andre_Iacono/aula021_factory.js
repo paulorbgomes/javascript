@@ -12,6 +12,7 @@ function criaLivro(titulo, autor, paginas){
 }
 
 let livro1 = criaLivro("Atomic Habits", "James Clear", 306);
+livro1.cor = "Verde";
 let livro2 = criaLivro("Tensor Models", "Paulo", 136);
 
 console.log(livro1);
