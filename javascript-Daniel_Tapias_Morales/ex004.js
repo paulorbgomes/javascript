@@ -1,0 +1,1 @@
+let num = prompt("Por favor, digite um numero de 1 a 6: ");
