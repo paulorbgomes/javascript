@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <div>
+        <button onclick="calcularTabuada()">Calcular Tabuada</button>
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+    </div>
+    <div id="resultado"></div>
+
+    <script>
+        let resultado = document.getElementById("resultado");
+
+        function calcularTabuada(){
+            let valor = Number(prompt("Qual o valor desejado? "));
+            let tabuada = "";
+            for(var i = 0; i <= 1000; i++){
+                tabuada = tabuada + valor + " x " + i + " = " + i*valor + "<br>";
+            }
+            resultado.innerHTML = tabuada;
+        }
+
+        function limparTabuada(){
+            resultado.innerHTML = "";
+        }
+    </script>
+</body>
+</html>
