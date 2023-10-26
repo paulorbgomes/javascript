@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+
+    <div id="div01"></div>
+    <div class="div02"></div>
+    <div id="div03"></div>
+
+    <script>
+        let div01 = document.querySelector("#div01");
+        let mensagem = "Tag HTML manipulada via JavaScript utilizando querrySelector e id!"
+        div01.innerHTML = mensagem;
+
+        let div02 = document.querySelector(".div02");
+        mensagem = "Tag HTML manipulada via JavaScript utilizando querrySelector e class!"
+        div02.innerHTML = mensagem;
+
+        let div03 = document.getElementById("div03");
+        mensagem = "Tag HTML manipulada via JavaScript utilizando getElementById!";
+        div03.innerHTML = mensagem; 
+    </script>
+</body>
+</html>
