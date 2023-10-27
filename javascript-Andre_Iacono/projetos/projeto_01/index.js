@@ -1,5 +1,6 @@
 function outcome(){
     let num1 = Number(document.getElementById("num-one").value);
+    console.log(num1);
     let num2 = Number(document.getElementById("num-two").value);
     let total = 0;
 

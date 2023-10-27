@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <h2>Programa Olá Você!</h2>
+    Nome: <input id="input" type="text"> <button onclick="mostrar()">Mostrar</button>
+    <p id="output"></p>
+
+    <script>
+        let input = document.getElementById("input");
+        let output = document.getElementById("output");
+
+        function mostrar(){
+            let nome = input.value;
+            output.innerHTML = `Seja bem-vindo, <b>${nome}</b>. Que o curso de JavaScript seja proveitoso!`
+        }
+
+    </script>
+</body>
+</html>
