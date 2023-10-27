@@ -22,7 +22,15 @@
         
         function converter(){
             saidaFilme.innerHTML = `<b>${nomeFilme.value}</b>`;
-            saidaTempo.innerHTML = `<b>Duração convertida (em horas e minutos): </b>`;
+
+            let horas = 0;
+            let min = Number(tempoFilme.value);
+            while(min >= 60){
+                horas = horas + 1;
+                min = min - 60;
+            }
+
+            saidaTempo.innerHTML = `<b>Duração convertida (em horas e minutos): ${horas} hora(s) e ${min} minuto(s)</b>`;
         }
     </script>
 </body>
