@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 008</title>
+</head>
+<body>
+    <h1>Ex008 - Calculadora com Switch</h1>
+
+    <script>
+        let n1 = Number(prompt("Digite o primeiro número: "));
+        let n2 = Number(prompt("Digite o segundo número: "));
+        let op = String(prompt("Qual operação deseja realizar? [+] [-] [*] [/]"));
+
+        function calculadora(n1, n2, op){
+            switch(op){
+                case "+": return n1 + n2;
+                          break;
+                case "-": return n1 - n2;
+                          break;
+                case "*": return n1 * n2;
+                          break;
+                case "/": return n1 / n2;
+                          break;
+            }
+        }
+
+        if(op === "+" || op === "-" || op === "*" || op === "/"){
+            alert(`${n1} ${op} ${n2} = ${calculadora(n1, n2, op)}`);
+        }
+        else{
+            alert(`Operação inválida!`);
+        }
+    </script>        
+</body>
+</html>
