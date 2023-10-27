@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <h2>Revenda de Veículos JS</h2>
+    <p>Veículo: <input type="text" id="veiculo"></p>
+    <p>Preço R$: <input type="text" id="preco"></p>
+    <button onclick="executar()">Ver Promoção</button>
+    <div id="output"></div>
+
+    <script>
+        let veiculo = document.getElementById("veiculo");
+        let preco = document.getElementById("preco");
+        let output = document.getElementById("output");
+
+        function executar(){
+            var modelo = veiculo.value;
+            var entrada = Number(preco.value) * (50 / 100);
+            var parcela = (Number(preco.value) - entrada) / 12;
+
+            output.innerHTML = `<b><br>Promoção: ${modelo}<br>Entrada de R$: ${entrada.toFixed(2)}<br>+12x de R$ ${parcela.toFixed(2)}</b>`;
+        }
+    </script>
+</body>
+</html>

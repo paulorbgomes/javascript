@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <h2>Restaurante JS</h2>
+    <p>Buffet por Quilo R$: <input type="text" id="valor"></p>
+    <p>Consumo do Cliente (gr): <input type="text" id="peso"></p>
+    <button onclick="calcular()">Calcular Preço</button>
+    <p id="output"></p>
+
+    <script>
+        function calcular(){
+            let preco = Number(document.getElementById("valor").value);
+            let consumo = Number(document.getElementById("peso").value);
+
+            let valorPagar = (preco * consumo / 1000).toFixed(2);
+
+            document.getElementById("output").innerHTML = `<br><b>Valor a pagar R$ ${valorPagar}</b>`;
+        }
+    </script>
+</body>
+</html>
