@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <h2>Supermercado JS</h2>
+    <p>Produto: <input type="text" id="produto"></p>
+    <p>Preço R$: <input type="text" id="preco"></p>
+    <button onclick="verPromocao()">Ver Promoção</button>
+    <p id="output"></p>
+
+    <script>
+        function verPromocao(){
+            let produto = document.getElementById("produto").value;
+            let preco = Number(document.getElementById("preco").value);
+
+            let prod3 = preco / 2;
+            let total = 2 * preco + prod3;
+
+            document.getElementById("output").innerHTML = `<b><br>${produto} - Promoção: Leve 3 por R$ ${total.toFixed(2)}<br>O 3º produto custa apenas R$ ${prod3.toFixed(2)}</b>`;
+        }
+    </script>
+</body>
+</html>
