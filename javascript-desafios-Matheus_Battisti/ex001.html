@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 001</title>
+</head>
+<body>
+    <h1>Ex001 - Conversão de Temperatura</h1>
+    <button onclick="c2f()">Celsius (°C) -> Fahrenheit (F)</button>
+    <button onclick="f2c()">Fahrenheit (F) -> Celsius (°C)</button>
+    <p id="output"></p>
+
+    <script>
+        function c2f(){
+            let cel = Number(prompt("Digite a temperatura em Celsius (°C): "));
+            let fah = (cel * 9/5) + 32;
+            document.getElementById("output").innerHTML = `<b>${cel.toFixed(2)} °C equivale a ${fah.toFixed(2)} F</b>`;
+        }
+
+        function f2c(){
+            let fah = Number(prompt("Digite a temperatura em Fahrenheit (F): "));
+            let cel = (fah - 32) * (5/9);
+            document.getElementById("output").innerHTML = `<b>${fah.toFixed(2)} F equivale a ${cel.toFixed(2)} °C</b>`;
+        }
+    </script> 
+</body>
+</html>
