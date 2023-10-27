@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 004</title>
+</head>
+<body>
+    <h1>Ex004 - Cálculo de Área e Perímetro</h1>
+    <button onclick="calcularArea()">Calcular Área</button>
+    <button onclick="calcularPerimetro()">Calcular Perímetro</button>
+    <p id="output"></p>
+
+    <script>
+        function calcularArea(){
+            let comprimento = Number(prompt("Valor do comprimento (uC): "));
+            let largura = Number(prompt("Valor da largura (uC): "));
+            let area = (comprimento * largura).toFixed(2);
+            document.getElementById("output").innerHTML = `<b>Valor da área do retângulo: ${area} uA</b>`;
+        }
+
+        function calcularPerimetro(){
+            let comprimento = Number(prompt("Valor do comprimento (uC): "));
+            let largura = Number(prompt("Valor da largura (uC): "));
+            let perimetro = (2*comprimento + 2*largura).toFixed(2);
+            document.getElementById("output").innerHTML = `<b>Valor do perímetro do retângulo: ${perimetro} uC</b>`;
+        }
+    </script> 
+</body>
+</html>
