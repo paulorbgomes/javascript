@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 013</title>
+</head>
+<body>
+    <h1>Ex013 - Exibição de Padrões</h1>
+    <p>Número: <input type="text" id="numero"></p>
+    <button onclick="exibirPadrao()">Exibir Padrão</button>
+    <div id="output"></div>
+
+    <script>
+        function exibirPadrao(){
+            let numero = Number(document.getElementById("numero").value);
+            let padraoFinal = "";
+            let novoPadrao = "";
+
+            for(let i = 1; i <= numero; i++){
+                novoPadrao = novoPadrao + " * ";
+                padraoFinal = padraoFinal + novoPadrao + "<br>";
+            }
+
+            document.getElementById("output").innerHTML = `<br>${padraoFinal}`;
+        }
+    </script>
+</body>
+</html>
