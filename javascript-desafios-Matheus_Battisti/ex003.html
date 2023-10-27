@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 003</title>
+</head>
+<body>
+    <h1>Ex003 - Concatenação de Strings </h1>
+
+    <script>
+        let nome = String(prompt("Digite o seu nome: "));
+        let idade = String(prompt("Digite sua idade: "));
+        let cidade = String(prompt("Digite a sua cidade: "));
+
+        function mensagem(nome, idade, cidade){
+            return `Seu nome é ${nome}, você tem ${idade} anos e mora em ${cidade}.`; 
+        }
+        alert(mensagem(nome, idade, cidade));
+    </script>
+</body>
+</html>
