@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <h2>Programa Situação do Aluno</h2>
+    <p>Nome do Aluno(a): <input type="text" id="nome"></p>
+    <p>1ª Nota: <input type="text" id="nota1"></p>
+    <p>2ª Nota: <input type="text" id="nota2"></p>
+    <button onclick="calcular()">Exibir Média e Situação</button>
+    <p id="output"></p>
+
+    <script>
+        function calcular(){
+            let nome = document.getElementById("nome").value;
+            let n1 = Number(document.getElementById("nota1").value);
+            let n2 = Number(document.getElementById("nota2").value);
+            let situacao = null;
+
+            let media = (n1 + n2) / 2;
+
+            if(media >= 7){
+                situacao = `Parabéns ${nome}! Você foi APROVADO(A)`;
+            }
+            else{
+                situacao = `Ops ${nome}, você foi REPROVADO(A)`;
+            }
+
+            document.getElementById("output").innerHTML = `<b>Média das Notas: ${media.toFixed(2)}<br>${situacao}</b>`;
+        }
+    </script>
+</body>
+</html>
