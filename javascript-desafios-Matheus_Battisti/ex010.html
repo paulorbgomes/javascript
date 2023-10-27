@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 010</title>
+</head>
+<body>
+    <h1>Ex010 - Somatório 1 a N</h1>
+    <p>Número: <input type="text" id="numero"></p>
+    <button onclick="calcularSomatorio()">Calcular Somatório</button>
+    <p id="output"></p>
+
+    <script>
+        function calcularSomatorio(){
+            let numero = Number(document.getElementById("numero").value);
+            let soma = 0;
+
+            for(let i = 1; i <= numero; i++){
+                soma = soma + i;
+            }
+
+            document.getElementById("output").innerHTML = `<b>A soma dos valores de 1 até ${numero} vale ${soma}</b>`;
+        }
+    </script>
+</body>
+</html>
