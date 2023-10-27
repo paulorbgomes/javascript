@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <h2>Área do Retângulo ...</h2>
+    <p>Valor da base (uC): <input id="base" type="text"></p>
+    <p>Valor da altura (uC): <input id="altura" type="text"></p>
+    <button onclick="calcularArea()">Calcular Área</button>
+    <p id="resultado"></p>
+
+    <script>
+        let base = document.getElementById("base");
+        let altura = document.getElementById("altura");
+        let resultado = document.getElementById("resultado");
+
+        function calcularArea(){
+            var valorBase = Number(base.value);
+            var valorAltura = Number(altura.value);
+            resultado.innerHTML = `Valor da área total: ${valorBase * valorAltura} uA`;
+        }
+    </script>
+</body>
+</html>
