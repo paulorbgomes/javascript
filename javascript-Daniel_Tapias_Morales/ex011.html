@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <h2>Cine JS: Filmes em Cartaz</h2>
+    <p>Título do Filme: <input id="filme" type="text"></p>
+    <p>Duração (min): <input id="duracao" type="text"></p>
+    <p><button onclick="converter()">Converter em Horas e Minutos</button></p>
+    <p id="saidaFilme"></p>
+    <p id="saidaTempo"></p>
+
+    <script>
+        let nomeFilme = document.getElementById("filme");
+        let tempoFilme = document.getElementById("duracao");
+        let saidaFilme = document.getElementById("saidaFilme");
+        let saidaTempo = document.getElementById("saidaTempo");
+        
+        function converter(){
+            saidaFilme.innerHTML = `<b>${nomeFilme.value}</b>`;
+            saidaTempo.innerHTML = `<b>Duração convertida (em horas e minutos): </b>`;
+        }
+    </script>
+</body>
+</html>
