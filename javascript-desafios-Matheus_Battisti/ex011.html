@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 011</title>
+</head>
+<body>
+    <h1>Ex011 - Tabuada de Multiplicação</h1>
+    <p>Número: <input type="text" id="numero"></p>
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+    <div id="output"></div>
+
+    <script>
+        function mostrarTabuada(){
+            let numero = Number(document.getElementById("numero").value);
+            let mensagem = "";
+            for(let i = 1; i <= 10; i++){
+                mensagem = mensagem + `${numero} x ${i} = ${numero * i}<br>`;
+            }
+            document.getElementById("output").innerHTML = `<br>${mensagem}`;
+        }
+    </script>
+</body>
+</html>
