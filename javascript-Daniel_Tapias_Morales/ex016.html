@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+    <h2>Farmácia JS</h2>
+    <p>Medicamento: <input type="text" id="medicamento"></p>
+    <p>Preço R$: <input type="text" id="preco"></p>
+    <button onclick="mostrarPromocao()">Mostrar Promoção</button>
+    <p id="output"></p>
+    
+    <script>
+        function mostrarPromocao(){
+            let nome = document.querySelector("#medicamento").value;
+            let preco = parseFloat(document.querySelector("#preco").value);
+
+            let novoValor = Math.floor(2*preco).toFixed(2);
+
+            document.getElementById("output").innerHTML = `<br><b>Promoção de ${nome}<br>Leve 2 por apenas R$ ${novoValor}</b>`;
+        }
+    </script>
+</body>
+</html>
