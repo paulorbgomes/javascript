@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 006</title>
+</head>
+<body>
+    <h1>Ex006 - Classificação de Faixa Etária</h1>
+    <p>Idade: <input type="text" id="idade"></p>
+    <button onclick="classificar()">Classificação de Faixa Etária</button>
+    <p id="output"></p>
+
+    <script>
+        function classificar(){
+            let idade = Number(document.getElementById("idade").value);
+            let mensagem = null;
+
+            if(idade >=0 && idade <= 12){
+                mensagem = "Criança";
+            }
+            else if(idade >= 13 && idade <= 17){
+                mensagem = "Adolescente";
+            }
+            else if(idade >= 18 && idade <= 59){
+                mensagem = "Adulto";
+            }
+            else if(idade >= 60){
+                mensagem = "Idoso";
+            }
+
+            document.getElementById("output").innerHTML = `<b> Você tem ${idade} anos. Faixa etária correspondente: ${mensagem}</b>`;
+        }
+    </script>  
+</body>
+</html>
