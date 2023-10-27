@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Lógica de Programação em JavaScript</title>
+</head>
+<body>
+    <h1>Curso de Lógica de Programação em JavaScript</h1>
+
+    <button onclick="somar()" id="soma">+</button>
+    <button onclick="subtrair()" id="sub">-</button>
+    <button onclick="multiplicar()" id="mul">*</button>
+    <button onclick="dividir()" id="div">/</button>
+    <div id="output"></div>
+
+    <script>
+        let num1 = Number(prompt("Digite um numero: "));
+        let num2 = 0;
+        let resultado = num1 + num2;
+        document.getElementById("output").innerHTML = resultado;
+
+        function somar(){
+            num2 = Number(prompt("Digite outro valor: "));
+            resultado = resultado + num2;
+            document.getElementById("output").innerHTML = resultado;
+        }
+
+        function subtrair(){
+            num2 = Number(prompt("Digite outro valor: "));
+            resultado = resultado - num2;
+            document.getElementById("output").innerHTML = resultado;
+        }
+
+        function multiplicar(){
+            num2 = Number(prompt("Digite outro valor: "));
+            resultado = resultado * num2;
+            document.getElementById("output").innerHTML = resultado;
+        }
+
+        function dividir(){
+            num2 = Number(prompt("Digite outro valor: "));
+            resultado = resultado / num2;
+            document.getElementById("output").innerHTML = resultado;
+        }
+
+    </script>
+</body>
+</html>
