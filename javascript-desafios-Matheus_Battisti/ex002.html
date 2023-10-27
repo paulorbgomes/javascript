@@ -7,9 +7,17 @@
 </head>
 <body>
     <h1>Ex002 - Cálculo de IMC</h1>
+    <button onclick="calcularIMC()">Calcular IMC</button>
+    <p id="output"></p>
 
+    <script>
+        function calcularIMC(){
+            let altura = Number(prompt("Digite a sua altura (em metros): "));
+            let peso = Number(prompt("Digite o seu peso (em Kg): "));
+            let imc = (peso / (altura * altura)).toFixed(2);
 
-
-    
+            document.getElementById("output").innerHTML = `<b>Seu IMC é: ${imc}</b>`;
+        }
+    </script>
 </body>
 </html>
