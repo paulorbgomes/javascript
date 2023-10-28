@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 016</title>
+</head>
+<body>
+    <h1>Ex016 - Fatorial (usando função)</h1>
+    <script>
+        let numero = Number(prompt("Digite um número: "));
+        let fatorial = 1;
+
+        if(numero < 0){
+            alert("Valor inválido!");
+        }
+        else if(numero === 0 || numero === 1){
+            alert(`O fatorial de ${numero} (i.e., ${numero}!) é igual a 1.`);
+        }
+        else{
+            for(var i = 1; i<= numero; i++){
+                fatorial = fatorial * i;
+            }
+            alert(`O fatorial de ${numero} (i.e., ${numero}!) é igual a ${fatorial}.`);
+        }
+    </script> 
+</body>
+</html>
