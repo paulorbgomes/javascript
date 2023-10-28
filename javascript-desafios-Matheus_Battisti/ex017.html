@@ -6,12 +6,31 @@
     <title>Exercício 017</title>
 </head>
 <body>
-    <h1>Ex017 - (usando função)</h1>
+    <h1>Ex017 - Máximo e Mínimo (usando função)</h1>
+    <script>
+        let num1 = Number(prompt("Primeiro valor: "));
+        let num2 = Number(prompt("Segundo valor: "));
 
+        function valorMaximo(a,b){
+            if(a > b){
+                return a;
+            }
+            else{
+                return b;
+            }
+        }
 
+        function valorMinimo(a,b){
+            if(a < b){
+                return a;
+            }
+            else{
+                return b;
+            }
+        }
 
-
-
-    
+        console.log(`Valor máximo: ${valorMaximo(num1,num2)}`);
+        console.log(`Valor mínimo: ${valorMinimo(num1,num2)}`);
+    </script>
 </body>
 </html>
