@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 019</title>
+</head>
+<body>
+    <h1>Ex019 - Contagem de Vogais (usando função)</h1>
+    <p>String: <input type="text" id="frase"></p>
+    <button onclick="contarVogais()">Contar Vogais</button>
+    <div id="output"></div>
+
+    <script>
+        function contarVogais(){
+            let frase = String(document.getElementById("frase").value);
+            frase = frase.toLowerCase();
+            let soma = 0;
+            for(let i = 0; i < frase.length; i++){
+                if(frase[i] === "a" || frase[i] === "e" || frase[i] === "i" || frase[i] === "o" || frase[i] === "u" ){
+                    soma += 1;
+                }
+            }
+            document.getElementById("output").innerHTML = `<br>A frase fornecida possui ${soma} vogais.`;
+        }
+    </script>
+</body>
+</html>
