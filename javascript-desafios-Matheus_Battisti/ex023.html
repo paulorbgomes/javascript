@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 023</title>
+</head>
+<body>
+    <h1>Ex023 - Elementos Duplicados</h1>
+    <script>
+        let vetor = [1, 1, 1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 5, 5, 5, 10, 100, 500];
+
+        function semRepeticoes(v){
+            return Array.from(new Set(v));
+        }
+
+        function novoSemRepeticoes(v){
+            let arraySem = new Array();
+            arraySem[0] = v[0];
+            for(let i = 1; i < v.length; i++){
+                let soma = 0;
+                for(let j = 0; j < arraySem.length; j++){
+                    if(v[i] == arraySem[j]){
+                        soma = soma + 1;
+                    }
+                }
+                if(soma == 0){
+                    arraySem.push(v[i]);
+                }
+            }
+            return arraySem;
+        }
+
+        function elementosUnicos(v){
+            let vetorUnico = new Array();
+            let pos = 0;
+            for(let i = 0; i < vetor.length; i++){
+                let soma = 0;
+                for(let j = 0; j < vetor.length; j++){
+                    if(i != j){
+                        if(vetor[i] == vetor[j]){
+                            soma = soma + 1;
+                        }
+                    }
+                }
+                if(soma == 0){
+                    vetorUnico[pos] = vetor[i];
+                    pos = pos + 1;
+                }
+            }
+            return vetorUnico;
+        }
+        console.log(`Vetor de entrada: ${vetor}`);
+        console.log(`Vetor sem repetições [autor]: ${semRepeticoes(vetor)}`);
+        console.log(`Vetor sem repetições [minha versão]: ${novoSemRepeticoes(vetor)}`); 
+        console.log(`Elementos que não se repetem: ${elementosUnicos(vetor)}`);
+    </script>
+</body>
+</html>
