@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 018</title>
+</head>
+<body>
+    <h1>Ex018 - Inversão de String (usando função)</h1>
+
+    <script>
+        let msg = String(prompt("Digite a string: "));
+
+        function inverteString(m){
+            let pos = m.length - 1;
+            let stringInvertida = "";
+            while(pos >= 0){
+                stringInvertida = stringInvertida + m[pos];
+                pos = pos - 1;
+            }
+            return stringInvertida;
+        }
+
+        alert(`A string ${msg} invertida é: ${inverteString(msg)}`);
+    </script>
+</body>
+</html>
