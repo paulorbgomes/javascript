@@ -9,20 +9,24 @@
     <h1>Ex016 - Fatorial (usando função)</h1>
     <script>
         let numero = Number(prompt("Digite um número: "));
-        let fatorial = 1;
-
-        if(numero < 0){
-            alert("Valor inválido!");
-        }
-        else if(numero === 0 || numero === 1){
-            alert(`O fatorial de ${numero} (i.e., ${numero}!) é igual a 1.`);
-        }
-        else{
-            for(var i = 1; i<= numero; i++){
-                fatorial = fatorial * i;
+        
+        function fatorial(numero){
+            let fatorial = 1;
+            if(numero < 0){
+                return "Valor inválido!";
             }
-            alert(`O fatorial de ${numero} (i.e., ${numero}!) é igual a ${fatorial}.`);
+            else if(numero === 0 || numero === 1){
+                return fatorial;
+            }
+            else{
+                for(var i = 1; i<= numero; i++){
+                    fatorial = fatorial * i;
+                }
+                return fatorial;
+            }
         }
+        
+        alert(`O fatorial de ${numero} é: ${fatorial(numero)}`)
     </script> 
 </body>
 </html>
