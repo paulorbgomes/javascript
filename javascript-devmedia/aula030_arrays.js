@@ -22,3 +22,4 @@ console.log(diasSemana);
 //console.log(diasSemana);
 
 diasSemana.forEach(mostraDia);
+
