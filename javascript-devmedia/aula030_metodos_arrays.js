@@ -16,3 +16,4 @@ const agenda = [
 ];
 const novaAgenda = agenda.map((contato) => contato.telefone);
 console.log(novaAgenda);
+
