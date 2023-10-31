@@ -1,5 +1,5 @@
 # javascript
-* Estudos sobre lógica e linguagem de programação em javascript;
+* Estudos sobre lógica de programação e algoritmos em javascript;
 * **Referências Bibliográficas:**
   1. [DevMedia](https://www.devmedia.com.br/)
   2. [JavaScript - Andre Iacono](https://www.udemy.com/course/aprenda-javascript-em-7-dias/)
