@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Básico</title>
+</head>
+<body>
+    <script>
+        
+        // É importante ler a documentação sobre o tipo Date em JS
+
+        //const bornDate = new Date()
+        //const bornDate = new Date(1989, 9, 17, 6, 0, 0)
+        //const bornDate = new Date("Feb 18 1982 07:00:00")
+        const bornDate = new Date("1982-02-18T09:00:00.000Z")
+        const today = new Date()
+
+        console.log(bornDate)
+        console.log(bornDate.toISOString())
+
+        console.log("dia", bornDate.getDate())
+        console.log("mês", bornDate.getMonth() + 1)
+        console.log("ano", bornDate.getFullYear())
+
+        console.log("idade", today.getFullYear() - bornDate.getFullYear())
+
+    </script>
+</body>
+</html>
