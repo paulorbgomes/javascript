@@ -10,16 +10,25 @@
 
         /*
             if(condicao) {
-                codigo 
+                codigo
+            } else if(condicao) {
+                codigo
+            } else {
+                codigo
             }
         */
 
         console.log("Início do programa ...")
 
-        if(false) {
-            console.log("Desvio de fluxo ...")
+        const valor = 10
+        if(valor <= 1) {
+            console.log("Condição 1 ...")
+        } else if(valor > 1 && valor <= 2) {
+            console.log("Condição intermediária ...")
+        } else {
+            console.log("Condição 2 ...")
         }
-
+        
         console.log("Fim do programa ...")
 
     </script>
