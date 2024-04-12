@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+    <script>
+
+        function mult(values, func) {
+            console.log(arguments)
+            for(let i = 0; i < values.length; i++) {
+                values[i] = func(values[i])
+            }
+            return values
+        }
+
+        const values = [1, 2, 3, 4, 10]
+        const func = (n) => {
+            return n * n * n
+        }
+
+        console.log(mult(values, func))
+        console.log(values.map((i) => i * i * i))
+
+    </script>
+</body>
+</html>

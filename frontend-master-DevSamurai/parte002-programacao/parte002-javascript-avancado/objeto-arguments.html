@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+    <script>
+
+        // Objeto arguments
+        function sum() {
+            let count = 0
+            for(let i of arguments) {
+                count = count + i
+            }
+            return count
+        }
+
+        console.log(sum())
+        console.log(sum(1, 1, 3, 10, 4, 1, 3, 4, 3, 70))
+
+    </script>
+</body>
+</html>
