@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Básico</title>
+</head>
+<body>
+    <script>
+
+        try {
+            console.log("Consultando o banco de dados ...")
+            throw "Erro 1032 ao conectar com o banco de dados ..."
+        } catch(error) {
+            alert("Erro de execução genérico. Por favor, fale com o suporte.")
+            console.error(error)
+        } finally {
+            console.log("Execução final ...")
+        }
+
+    </script>
+</body>
+</html>
