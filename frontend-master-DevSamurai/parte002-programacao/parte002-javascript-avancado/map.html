@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+    <script>
+
+        const numbers = [1, 2, 3, 4, 5]
+
+        const double = numbers.map((n) => n * 2)
+        console.log(double)
+
+        const fahrenheit = [0, 32, 45, 46, 47, 91, 93, 121]
+        const celsius = fahrenheit.map((f) => 5 * (f - 32) / 9) 
+        console.log(celsius)
+
+        const people = [
+            {name: "felipe", age: 40},
+            {name: "aManda", age: 14},
+            {name: "Davi", age: 9}
+        ]
+        const peopleNameMap = people.map((p) => p.name.toUpperCase())
+        console.log(peopleNameMap)
+
+    </script>
+</body>
+</html>

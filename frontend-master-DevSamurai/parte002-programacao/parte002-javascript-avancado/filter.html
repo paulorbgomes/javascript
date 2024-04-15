@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+    <script>
+
+        const numbers = [10, 18, 1, 15]
+
+        const result = numbers.filter((n) => n > 10)
+        console.log(result)
+
+        const people = [
+            {name: "Felipe", age: 40, gender: "M"},
+            {name: "Paulo", age: 14, gender: "M"},
+            {name: "Amanda", age: 18, gender: "F"}
+        ]
+
+        const peoples18 = people.filter((p) => p.age >= 18 && p.gender === "M")
+        console.log(peoples18)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+    <script>
+
+        let values = [1.5, 2, 4, 10]
+
+        function callback(acumulator, currentValue, index, array) {
+            console.log("acumulator", acumulator)
+            console.log("currentValue", currentValue)
+            console.log("index", index)
+            console.log("array", array)
+            console.log("---")
+
+            return acumulator + 1
+        }
+
+        values.reduce(callback, 0)
+
+    </script>
+</body>
+</html>
