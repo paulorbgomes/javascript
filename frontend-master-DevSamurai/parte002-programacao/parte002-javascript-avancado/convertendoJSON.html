@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+   <script>
+
+    const people = [
+        {
+            id: 1,
+            name: "Felipe",
+            bornDate: new Date(1982, 1, 18),
+            address: {
+                city: "São José dos Campos"
+            }
+        },
+        {
+            id: 2,
+            name: "Eduardo",
+            bornDate: new Date(2001, 3, 5),
+            address: {
+                city: "Recife"
+            }
+        }
+    ]
+
+    console.log(people)
+    console.log(JSON.stringify(people))
+    console.log(typeof JSON.stringify(people))
+
+    const json = '[{"id":1,"name":"Felipe","bornDate":"1982-02-18T03:00:00.000Z","address":{"city":"São José dos Campos"}},{"id":2,"name":"Eduardo","bornDate":"2001-04-05T03:00:00.000Z","address":{"city":"Recife"}}]'
+    console.log(JSON.parse(json))
+
+    
+
+   </script> 
+</body>
+</html>

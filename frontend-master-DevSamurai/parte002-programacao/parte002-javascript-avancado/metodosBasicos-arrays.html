@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+    <script>
+
+        let people = ["Felipe", "André", "Paulo", "Jonny", "Marcelo"]
+
+        console.log(people.length)
+
+        // Retornar elementos especificos de um array
+        console.log(people[2])
+        console.log(people[people.length - 1])
+
+        // Retornar fatias de um array
+        console.log(people.slice(1,4))
+
+        // Adicionar novos elementos no array (inicio e fim)
+        people.push("Ana")       // adiciona no final
+        people.unshift("Maria")  // adiciona no inicio
+        console.log(people)
+
+        // Remover elementos no array (inicio e fim)
+        people.shift()  // remove do inicio
+        people.pop()    // remove do final
+        console.log(people)
+
+        // Remover fatias de um array
+        people.splice(0, 2)
+        console.log(people)
+
+        // Localizar elementos em um array
+        let index = people.indexOf("Jonny")
+        console.log(index)
+
+    </script>
+</body>
+</html>
