@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+
+    <img src="" alt="">
+    <h1>Seu Nome</h1>
+    <h2>Programador JavaScript</h2>
+    <p>Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.</p>
+    <p>Para mais detalhes, por favor, visite meu
+        <a href="#">Github</a>
+        ou
+        <a href="#">Portfólio</a>.
+    </p>
+
+    <script>
+
+        const subTitleEl = document.createElement("h2")
+        subTitleEl.innerHTML = "Projetos"
+
+        const pjListEl = document.createElement("ul")
+
+        const pjListItem1 = document.createElement("li")
+        pjListItem1.innerHTML = "TODO MVC"
+
+        const pjListItem2 = document.createElement("li")
+        pjListItem2.innerHTML = "GitHub API"
+
+        const pjListItem3 = document.createElement("li")
+        pjListItem3.innerHTML = "eCommerce"
+
+        pjListEl.append(pjListItem1)
+        pjListEl.append(pjListItem2)
+        pjListEl.append(pjListItem3)
+
+        document.body.append(subTitleEl)
+        document.body.append(pjListEl)
+
+    </script>
+
+</body>
+</html>

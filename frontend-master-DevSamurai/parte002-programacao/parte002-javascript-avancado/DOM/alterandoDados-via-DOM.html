@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+
+    <img src="" alt="">
+    <h1 id="person-name" class="text">Seu Nome</h1>
+    <h2>Programador JavaScript</h2>
+    <p>Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.</p>
+    <p>Para mais detalhes, por favor, visite meu <a href="#">Github</a> ou <a href="#">Portfólio</a>.</p>
+
+    <script>
+        const titleEl = document.querySelector("#person-name")
+        console.log("value: ", titleEl.innerHTML)
+        console.log("value: ", titleEl.innerText)
+
+        titleEl.innerHTML = "Paulo R. B. Gomes"
+        titleEl.style.color = "red"
+        console.log("value: ", titleEl.innerHTML)
+    </script>
+
+</body>
+</html>
