@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+
+    <img src="" alt="">
+    <h1 id="person-name" class="text">Seu Nome</h1>
+    <h2>Programador JavaScript</h2>
+    <p class="text">Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.</p>
+    <p>Para mais detalhes, por favor, visite meu <a href="#">Github</a> ou <a href="#">Portfólio</a>.</p>
+    
+    <script>
+        //console.log("*", document.querySelectorAll("*"))
+        //console.log("id", document.querySelector("#person-name"))
+        //console.log("tag", document.querySelectorAll("p"))
+        //console.log("class", document.querySelector(".text"))
+        //console.log("class", document.querySelectorAll(".text"))
+        //console.log("attr", document.querySelectorAll("a[href]"))
+
+        // Iterando toda a arvore DOM ...
+        for(const el of document.querySelectorAll("*")){
+            console.log("el", el)
+        }
+    </script>
+
+</body>
+</html>

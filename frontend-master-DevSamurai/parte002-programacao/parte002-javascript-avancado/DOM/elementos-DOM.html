@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+
+    <img src="" alt="">
+    <h1 id="person-name" class="title">Seu Nome</h1>
+    <h2>Programador JavaScript</h2>
+    <p>Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.</p>
+    <p class="title">Para mais detalhes, por favor, visite meu site <a href="#">Github</a>.</p>
+
+    <script>
+        console.log(document)
+        console.log(document.body)
+
+        // Metodos exploratorios
+
+        //const titleEl = document.getElementById("person-name")
+        //console.log("titleEl", titleEl)
+
+        //const titleEl = document.getElementsByTagName("p")
+        //console.log("titleEl", titleEl)
+
+        // Iterando ...
+        const titleEl = document.getElementsByClassName("title")
+        console.log("titleEl", titleEl)
+
+        for (const el of titleEl) {
+            console.log("el", el)
+        }
+        
+    </script>
+    
+</body>
+</html>
