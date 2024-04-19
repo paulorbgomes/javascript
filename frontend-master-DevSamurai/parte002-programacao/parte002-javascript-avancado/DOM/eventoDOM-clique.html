@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avançado</title>
+</head>
+<body>
+
+    <button>Clique me</button>
+    <a href="https://devsamurai.com.br">Clique me</a>
+
+    <script>
+        const button = document.querySelector("button")
+        button.addEventListener("click", () => {
+            console.log("Clicou no botão!")
+        })
+
+        const hyperLink = document.querySelector("a")
+        hyperLink.addEventListener("click", (event) => {
+            event.preventDefault()
+            console.log("Clicou no hyperlink!")
+        })
+    </script>
+
+</body>
+</html>
