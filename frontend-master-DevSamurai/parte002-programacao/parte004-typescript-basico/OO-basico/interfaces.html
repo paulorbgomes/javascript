@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Básico</title>
+</head>
+<body>
+    
+    <script>
+
+       interface Car {
+        parts: Array<string>
+        assembly()
+       }
+
+       class CarModelA implements Car {
+        parts: string[] = ["engine1.0", "manual_transmission"]
+
+        assembly() {
+            const car = this.parts.join(".")
+        }
+       }
+
+    </script>
+
+</body>
+</html>
