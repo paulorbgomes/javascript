@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classificando Triângulos ...</title>
+    <style>
+      img {
+        margin: 0px 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><strong>Programa Lados de um Triângulo</strong></h1>
+    <img src="triangulos.png" alt="" />
+    <p>
+      Lado A:
+      <input type="text" name="" id="ladoA" />
+    </p>
+    <p>
+      Lado B:
+      <input type="text" name="" id="ladoB" />
+    </p>
+    <p>
+      Lado C:
+      <input type="text" name="" id="ladoC" />
+    </p>
+    <p>
+      <input type="button" value="Verificar Lados" onclick="verificar()" />
+    </p>
+    <p id="s1"></p>
+    <p id="s2"></p>
+    <script>
+      function verificar() {
+        var A = window.document.getElementById("ladoA");
+        var B = window.document.getElementById("ladoB");
+        var C = window.document.getElementById("ladoC");
+        var p1 = window.document.getElementById("s1");
+        var p2 = window.document.getElementById("s2");
+        var a = Number(A.value);
+        var b = Number(B.value);
+        var c = Number(C.value);
+        if (a <= b + c && b <= a + c && c <= a + b) {
+          p1.innerHTML = "<strong>Os lados podem formar um triângulo!</strong>";
+          if (a == b && a == c) {
+            p2.innerHTML = "<strong>Tipo: Equilátero</strong>";
+          } else if (a != b && a != c && b != c) {
+            p2.innerHTML = "<strong>Tipo: Escaleno</strong>";
+          } else {
+            p2.innerHTML = "<strong>Tipo: Isósceles</strong>";
+          }
+        } else {
+          p1.innerHTML =
+            "<strong>Os lados não podem formar um triângulo!</strong>";
+        }
+      }
+    </script>
+  </body>
+</html>

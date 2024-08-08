@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olá Você</title>
+  </head>
+  <body>
+    <h1>Programa Olá Você!</h1>
+    Nome:
+    <input type="text" name="Nome" id="txt1" />
+    <input type="button" value="Mostrar" onclick="mostrar()" />
+    <p id="d1"></p>
+    <script>
+      var t1 = window.document.getElementById("txt1");
+      var d = window.document.getElementById("d1");
+      function mostrar() {
+        d.innerHTML = `Seja bem-vindo, <strong>${t1.value}</strong>! Continue estudando HTML e JavaScript!`;
+      }
+    </script>
+  </body>
+</html>

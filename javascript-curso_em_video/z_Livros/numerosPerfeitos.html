@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Números Perfeitos</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Programa Números Perfeitos</h1>
+    <img src="perfeitos.png" alt="" />
+    <p>Número: <input type="number" name="" id="numero" /></p>
+    <input
+      type="button"
+      value="Verificar Se É Perfeito"
+      onclick="verificar()"
+    />
+    <p id="s1"></p>
+    <p id="s2"></p>
+    <script>
+      function verificar() {
+        var num = window.document.getElementById("numero");
+        var s1 = window.document.getElementById("s1");
+        var s2 = window.document.getElementById("s2");
+        var soma = 0;
+        var numeros = "";
+        for (let i = 1; i < Number(num.value); i = i + 1) {
+          if (Number(num.value) % i == 0) {
+            soma = soma + i;
+            numeros = numeros + `${i} `;
+          }
+        }
+
+        if (soma == Number(num.value)) {
+          s1.innerText =
+            `Divisores de ${num.value}: ` + `${numeros}` + `(Soma: ${soma})`;
+          s2.innerText = `${num.value} é um número Perfeito!`;
+        } else {
+          s1.innerText =
+            `Divisores de ${num.value}:` + `${numeros}` + `(Soma: ${soma})`;
+          s2.innerText = `${num.value} não é um número Perfeito!`;
+        }
+      }
+    </script>
+  </body>
+</html>

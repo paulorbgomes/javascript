@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revenda JS</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Revenda de Veículos JS</h1>
+    <p>
+      Veículo:
+      <input type="text" name="" id="veiculo" />
+    </p>
+    <p>
+      Preço R$:
+      <input type="text" name="" id="valor" />
+    </p>
+    <p>
+      <input type="button" value="Ver Promoção" onclick="clicar()" />
+    </p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+      function clicar() {
+        var veiculo = window.document.getElementById("veiculo");
+        var valor = window.document.getElementById("valor");
+        var p1 = window.document.getElementById("p1");
+        p1.innerHTML = `<strong>Promoção: ${veiculo.value}</strong>`;
+        var entrada = Number(valor.value) / 2;
+        var p2 = window.document.getElementById("p2");
+        p2.innerHTML = `<strong>Entrada de R$: ${entrada
+          .toFixed(2)
+          .replace(".", ",")}</strong>`;
+        var p3 = window.document.getElementById("p3");
+        var parcela = (valor.value - entrada) / 12;
+        p3.innerHTML = `<strong>+12x de R$: ${parcela
+          .toFixed(2)
+          .replace(".", ",")}</strong>`;
+      }
+    </script>
+  </body>
+</html>

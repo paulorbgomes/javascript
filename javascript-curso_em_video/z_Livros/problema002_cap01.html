@@ -1,0 +1,18 @@
+<meta charset="utf-8" />
+<script>
+  // Elaborar um programa para uma pizzaria, o qual leia o valor total de uma conta
+  // e quantos clientes vão pagá-la. Calcule e informe o valor a ser pago por cliente.
+  const valor = Number(prompt("Valor da Conta R$:"));
+  const clientes = Number(prompt("Número de Clientes:"));
+  const valorPagar = valor / clientes;
+  alert(
+    `Valor da Conta: R$ ${valor
+      .toFixed(2)
+      .replace(
+        ".",
+        ","
+      )}\nNúmero de Clientes: ${clientes}\nValor por Cliente R$ ${valorPagar
+      .toFixed(2)
+      .replace(".", ",")}`
+  );
+</script>

@@ -1,0 +1,21 @@
+body {
+  background: khaki;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+  font: normal 30pt Arial;
+}
+
+section {
+  padding: 10px;
+  background: white;
+  font: normal 15pt Arial;
+  width: 600px;
+  margin: 10px 350px;
+}
+
+footer {
+  text-align: center;
+}

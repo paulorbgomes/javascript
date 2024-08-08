@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Calculadora (+ - x /)</title>
+    <style></style>
+  </head>
+  <body>
+    <section>
+      <h1 id="t1">Somando Valores</h1>
+      <input type="number" name="" id="nsum1" />
+      +
+      <input type="number" name="" id="nsum2" />
+      <input type="button" value="Somar" onclick="somar()" />
+      <p id="p1"></p>
+    </section>
+
+    <section>
+      <h1 id="t2">Subtraindo Valores</h1>
+      <input type="number" name="" id="nsub1" />
+      -
+      <input type="number" name="" id="nsub2" />
+      <input type="button" value="Subtrair" onclick="subtrair()" />
+      <p id="p2"></p>
+    </section>
+
+    <section>
+      <h1 id="t3">Multiplicando Valores</h1>
+      <input type="number" name="" id="nmul1" />
+      x
+      <input type="number" name="" id="nmul2" />
+      <input type="button" value="Multiplicar" onclick="multiplicar()" />
+      <p id="p3"></p>
+    </section>
+
+    <section>
+      <h1 id="t4">Dividindo Valores</h1>
+      <input type="number" name="" id="ndiv1" />
+      /
+      <input type="number" name="" id="ndiv2" />
+      <input type="button" value="Dividir" onclick="dividir()" />
+      <p id="p4"></p>
+    </section>
+    <p id="ass"></p>
+
+    <script>
+      var t1 = window.document.getElementById("t1");
+      t1.style.background = "yellow";
+      var t2 = window.document.getElementById("t2");
+      t2.style.background = "magenta";
+      var t3 = window.document.getElementById("t3");
+      t3.style.background = "green";
+      var t4 = window.document.getElementById("t4");
+      t4.style.background = "gray";
+
+      function somar() {
+        var n1 = window.document.getElementById("nsum1");
+        var n2 = window.document.getElementById("nsum2");
+        var soma = Number(n1.value) + Number(n2.value);
+        var p1 = window.document.getElementById("p1");
+        p1.style.background = "yellow";
+        p1.innerHTML = `A <strong>soma</strong> entre ${n1.value} e ${n2.value} é igual a <strong>${soma}</strong>.`;
+      }
+
+      function subtrair() {
+        var n1 = window.document.getElementById("nsub1");
+        var n2 = window.document.getElementById("nsub2");
+        var subtra = Number(n1.value) - Number(n2.value);
+        var p2 = window.document.getElementById("p2");
+        p2.innerHTML = `A <strong>subtração</strong> entre ${n1.value} e ${n2.value} é igual a <strong>${subtra}</strong>.`;
+        p2.style.background = "magenta";
+      }
+
+      function multiplicar() {
+        var n1 = window.document.getElementById("nmul1");
+        var n2 = window.document.getElementById("nmul2");
+        var multiplicacao = Number(n1.value) * Number(n2.value);
+        var p3 = window.document.getElementById("p3");
+        p3.innerHTML = `A <strong>multiplicação</strong> entre ${n1.value} e ${n2.value} é igual a <strong>${multiplicacao}</strong>.`;
+        p3.style.background = "green";
+      }
+
+      function dividir() {
+        var n1 = window.document.getElementById("ndiv1");
+        var n2 = window.document.getElementById("ndiv2");
+        var divisao = Number(n1.value) / Number(n2.value);
+        var p4 = window.document.getElementById("p4");
+        p4.innerHTML = `A <strong>divisão</strong> entre ${n1.value} e ${
+          n2.value
+        } é igual a <strong>${divisao.toFixed(2)}</strong>.`;
+        p4.style.background = "gray";
+      }
+      var a = window.document.getElementById("ass");
+      a.innerText =
+        "Calculadora desenvolvida por Paulo R. B. Gomes em 25/04/2023.";
+    </script>
+  </body>
+</html>

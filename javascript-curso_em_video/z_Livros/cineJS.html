@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cine JS</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Cine JS: Filme em Cartaz</h1>
+    <p>
+      Título do Filme:
+      <input type="text" name="" id="filme" />
+    </p>
+    <p>
+      Duração (min):
+      <input type="text" name="" id="duracao" />
+    </p>
+    <p>
+      <input
+        type="button"
+        value="Converter em Horas e Minutos"
+        onclick="clicar()"
+      />
+    </p>
+    <p id="resF"></p>
+    <p id="resD"></p>
+    <script>
+      function clicar() {
+        var filme = window.document.getElementById("filme");
+        var duracao = window.document.getElementById("duracao");
+        var resD = window.document.getElementById("resD");
+        var cov = Math.floor(Number(duracao.value) / 60);
+        var m = duracao.value - cov * 60;
+        resD.innerHTML = `<strong>${cov} hora(s) e ${m} minuto(s)</strong>`;
+        var resF = window.document.getElementById("resF");
+        resF.innerHTML = `<strong>${filme.value}</strong>`;
+      }
+    </script>
+  </body>
+</html>

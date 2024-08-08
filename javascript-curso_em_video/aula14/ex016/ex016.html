@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Contador</title>
+    <style>
+      body {
+        background: beige;
+      }
+      header {
+        text-align: center;
+        padding: 15px;
+        font: normal 25px Arial;
+      }
+      section {
+        padding: 5px;
+        background: lightgreen;
+        width: 400px;
+        margin: 0px 470px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Vamos Contar ...</header>
+    <section>
+      <p>Início: <input type="text" name="" id="inicio" /></p>
+      <p>Fim: <input type="text" name="" id="fim" /></p>
+      <p>Passo: <input type="text" name="" id="passo" /></p>
+      <p><input type="button" value="Contar" onclick="contar()" /></p>
+      <div id="resp">Iniciando a contagem ...</div>
+    </section>
+    <script>
+      function contar() {
+        let ini = window.document.getElementById("inicio");
+        let fi = window.document.getElementById("fim");
+        let pa = window.document.getElementById("passo");
+        let re = window.document.getElementById("resp");
+        let i = Number(ini.value);
+        let f = Number(fi.value);
+        let p = Number(pa.value);
+        let resposta = `Entre ${i} e ${f} com passo ${p}: `;
+
+        for (let c = i; c <= f; c = c + p) {
+          resposta = resposta + c + " ";
+        }
+
+        re.innerText = resposta;
+      }
+    </script>
+  </body>
+</html>

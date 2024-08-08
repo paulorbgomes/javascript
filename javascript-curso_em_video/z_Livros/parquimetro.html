@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parquímetro</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Programa Parquímetro</h1>
+    <img src="parquimetro.png" alt="" />
+    <p>Valor R$ <input type="number" name="" id="entrada" /></p>
+    <input type="button" value="Confirmar Depósito" onclick="clicar()" />
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+      function clicar() {
+        var ent = window.document.getElementById("entrada");
+        var p1 = window.document.getElementById("p1");
+        var p2 = window.document.getElementById("p2");
+        if (Number(ent.value) < 1) {
+          window.alert("Valor Insuficiente!");
+        } else if (Number(ent.value) >= 1 && Number(ent.value) < 1.75) {
+          var troco = Number(ent.value) - 1;
+          p1.innerHTML = `<strong>Tempo: 30 min</strong>`;
+          p2.innerHTML = `<strong>Troco R$: ${troco.toFixed(2)}</strong>`;
+        } else if (Number(ent.value) >= 1.75 && Number(ent.value) < 3) {
+          var troco = Number(ent.value) - 1.75;
+          p1.innerHTML = "<strong>Tempo: 60 min</strong>";
+          p2.innerHTML = `<strong>Troco R$: ${troco.toFixed(2)}</strong>`;
+        } else {
+          troco = Number(ent.value) - 3;
+          p1.innerHTML = "<strong>Tempo: 120 min</strong>";
+          p2.innerHTML = `<strong>Troco R$: ${troco.toFixed(2)}</strong>`;
+        }
+      }
+    </script>
+  </body>
+</html>

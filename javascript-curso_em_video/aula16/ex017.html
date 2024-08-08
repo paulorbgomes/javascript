@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analisador de Números</title>
+    <style>
+      body {
+        background: peru;
+      }
+      header {
+        padding: 15px;
+        text-align: center;
+        font: normal 30px Arial;
+        color: white;
+      }
+      section {
+        text-align: center;
+        padding: 5px;
+        background: white;
+        width: 500px;
+        margin: 0px 420px;
+      }
+      footer {
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      div#d1 {
+        padding: 5px;
+      }
+      div#bt {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Analisador de Números</header>
+    <section>
+      <p>
+        Número (entre 1 e 100): <input type="number" name="" id="valor" />
+        <input type="button" value="Adicionar" onclick="adicionar()" />
+      </p>
+      <div id="d1"></div>
+      <div id="bt">
+        <input type="button" value="Finalizar" onclick="finalizar()" />
+      </div>
+      <div id="d2">
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+      </div>
+    </section>
+    <footer>&copy; Paulo R. B. Gomes</footer>
+    <script>
+      var n = window.document.getElementById("valor");
+      var d1 = window.document.getElementById("d1");
+      var vetor = [];
+      var cont = 0;
+      var visor = "";
+      function adicionar() {
+        if (
+          vetor.indexOf(Number(n.value)) == -1 &&
+          Number(n.value) >= 1 &&
+          Number(n.value) <= 100
+        ) {
+          vetor[cont] = Number(n.value);
+          cont = cont + 1;
+          visor = visor + `Valor ${Number(n.value)} adicionado.` + "\n";
+        } else {
+          window.alert("Valor inválido ou já encontrado na lista!");
+        }
+        d1.innerText = visor;
+      }
+
+      function finalizar() {
+        var d2 = window.document.getElementById("d2");
+        var p1 = window.document.getElementById("p1");
+        var p2 = window.document.getElementById("p2");
+        var p3 = window.document.getElementById("p3");
+        var p4 = window.document.getElementById("p4");
+        var p5 = window.document.getElementById("p5");
+
+        p1.innerText = `Ao todo, temos ${cont} números cadastrados.`;
+
+        let maxv = vetor[0];
+        for (let i = 0; i < vetor.length; i = i + 1) {
+          if (vetor[i] >= maxv) {
+            maxv = vetor[i];
+          }
+        }
+        p2.innerText = `O maior valor informado foi ${maxv}.`;
+
+        let minv = vetor[0];
+        let soma = 0;
+        for (let i = 0; i < vetor.length; i = i + 1) {
+          soma = soma + vetor[i];
+          if (vetor[i] <= minv) {
+            minv = vetor[i];
+          }
+        }
+        p3.innerText = `O menor valor informado foi ${minv}.`;
+        p4.innerText = `Somando todos os valores, temos ${soma}.`;
+        var media = soma / vetor.length;
+        p5.innerText = `A média dos valores digitados é ${media}`;
+      }
+    </script>
+  </body>
+</html>

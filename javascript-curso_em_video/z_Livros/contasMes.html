@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contas do Mês</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Programa Contas do Mês</h1>
+    <img src="contas.png" alt="" />
+    <p id="descricao">
+      Descrição da Conta: <input type="text" name="" id="desc" />
+    </p>
+    <p>Valor a Pagar R$: <input type="text" name="" id="valor" /></p>
+    <input type="button" value="Registrar Conta" onclick="registrar()" />
+    <p id="detalhe"></p>
+    <p id="total"></p>
+    <script>
+      var desc = window.document.getElementById("desc");
+      var valor = window.document.getElementById("valor");
+      var detalhe = window.document.getElementById("detalhe");
+      var total = window.document.getElementById("total");
+      var registro = "";
+      var soma = 0;
+      var cont = 0;
+
+      function registrar() {
+        registro =
+          registro +
+          `${desc.value} - R$: ${Number(valor.value).toFixed(2)}` +
+          `\n`;
+        detalhe.innerText = registro;
+        soma = soma + Number(valor.value);
+        cont = cont + 1;
+        total.innerText = `${cont} conta(s) - Total R$: ${soma.toFixed(2)}`;
+      }
+    </script>
+  </body>
+</html>

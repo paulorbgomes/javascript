@@ -1,0 +1,28 @@
+body {
+  background: lightsteelblue;
+}
+
+header {
+  font: normal 30pt Arial;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  padding: 10px;
+  background: white;
+  text-align: center;
+  font: normal 20px Arial;
+  width: 500px;
+  margin: 10px 400px 10px;
+}
+
+div#div2 {
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+}

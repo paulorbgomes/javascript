@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificação de Velocidade</title>
+    <style></style>
+  </head>
+  <body>
+    <h1><strong>Programa Verifica Velocidade</strong></h1>
+    <img src="velocidade.png" alt="" />
+    <p>Velocidade Permitida: <input type="number" name="" id="vp" /></p>
+    <p>Velocidade do Condutor: <input type="number" name="" id="vc" /></p>
+    <input type="button" value="Verificar Velocidade" onclick="verificar()" />
+    <p id="resp"></p>
+    <script>
+      function verificar() {
+        var vp = window.document.getElementById("vp");
+        var vc = window.document.getElementById("vc");
+        var res = window.document.getElementById("resp");
+        if (Number(vc.value) <= Number(vp.value)) {
+          res.innerHTML = "<strong>Situação: Sem Multa!</strong>";
+        } else if (
+          Number(vc.value) <=
+          Number(vp.value) + 0.2 * Number(vp.value)
+        ) {
+          res.innerHTML = "<strong>Situação: Multa Leve!</strong>";
+        } else {
+          res.innerHTML = "<strong>Situação: Multa Grave!</strong>";
+        }
+      }
+    </script>
+  </body>
+</html>

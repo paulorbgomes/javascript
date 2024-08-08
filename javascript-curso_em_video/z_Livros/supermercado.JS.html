@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supermercado JS</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Supermercado JS</h1>
+    <p>
+      Produto:
+      <input type="text" name="" id="produto" />
+    </p>
+    <p>
+      Preço R$:
+      <input type="number" name="" id="preco" />
+    </p>
+    <p>
+      <input type="button" value="Ver Promoção" onclick="ver()" />
+    </p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+      function ver() {
+        var produto = window.document.getElementById("produto");
+        var preco = window.document.getElementById("preco");
+        var p1 = window.document.getElementById("p1");
+        var p2 = window.document.getElementById("p2");
+        var d1 = Number(preco.value) / 2;
+        var d2 = 2 * Number(preco.value) + d1;
+        p1.innerHTML = `<strong>${produto.value} - Promoção: Leve 3 por R$ ${d2
+          .toFixed(2)
+          .replace(".", ",")}</strong>`;
+        p2.innerHTML = `<strong>O 3º produto custa apenas R$ ${d1
+          .toFixed(2)
+          .replace(".", ",")}</strong>`;
+      }
+    </script>
+  </body>
+</html>

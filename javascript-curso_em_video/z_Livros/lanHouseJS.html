@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lan House HTML</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Lan House JS</h1>
+    <p>
+      Valor por 15 min de Uso R$:
+      <input type="number" name="" id="valor" />
+    </p>
+    <p>
+      Tempo de Uso do Cliente (em min):
+      <input type="number" name="" id="tempo" />
+    </p>
+    <p>
+      <input
+        type="button"
+        value="Calcular o Valor a Pagar (R$)"
+        onclick="calcular()"
+      />
+    </p>
+    <p id="p1"></p>
+    <script>
+      function calcular() {
+        var valor = window.document.getElementById("valor");
+        var tempo = window.document.getElementById("tempo");
+        var p1 = window.document.getElementById("p1");
+        if (Number(tempo.value) % Number(valor.value) != 0) {
+          var pagar =
+            (Math.floor(Number(tempo.value) / 15) + 1) * Number(valor.value);
+        } else {
+          var pagar =
+            Math.floor(Number(tempo.value) / 15) * Number(valor.value);
+        }
+        p1.innerHTML = `<strong>Valor a Pagar R$: ${pagar
+          .toFixed(2)
+          .replace(".", ",")}</strong>`;
+      }
+    </script>
+  </body>
+</html>

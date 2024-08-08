@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raiz Quadrada</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Programa Raiz Quadrada</h1>
+    <div id="div1">
+      <img src="raiz.png" alt="Raiz Quadrada" />
+    </div>
+    <p>
+      Número:
+      <input type="text" name="" id="num" />
+    </p>
+    <p>
+      <input type="button" value="Exibir Raiz Quadrada" onclick="clicar()" />
+    </p>
+    <p id="p2"></p>
+    <script>
+      function clicar() {
+        var num = window.document.getElementById("num");
+        var p2 = window.document.getElementById("p2");
+        var a = Math.sqrt(Number(num.value));
+        aux = a / Math.floor(a);
+        if (a / aux == a) {
+          p2.innerHTML = `<strong>Raiz: ${a}</strong>`;
+        } else {
+          p2.innerHTML = `<strong>Não há raiz exata para ${num.value}!</strong>`;
+        }
+      }
+    </script>
+  </body>
+</html>

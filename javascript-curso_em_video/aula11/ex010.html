@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DETRAN</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Sistema de Multas - DETRAN</h1>
+    Velocidade do carro (em Km/h):
+    <input type="number" name="" id="txt1" />
+    <input type="button" value="Verificar" onclick="analisar()" />
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+      function analisar() {
+        var t1 = window.document.getElementById("txt1");
+        var vel = Number(t1.value);
+        var p1 = window.document.getElementById("p1");
+        if (vel > 60) {
+          p1.innerText = `Sua velocidade atual é ${vel} Km/h.\nVelocidade acima do limite permitido. MULTADO por excesso de velocidade!`;
+        } else {
+          p1.innerText = `Sua velocidade atual é ${vel} Km/h.\nVelocidade dentro do limite permitido! PARABÉNS!`;
+        }
+        var p2 = window.document.getElementById("p2");
+        p2.innerText = "Dirija sempre com cinto de segurança!";
+      }
+    </script>
+  </body>
+</html>

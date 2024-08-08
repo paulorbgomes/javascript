@@ -1,0 +1,47 @@
+body {
+  background: cadetblue;
+  color: white;
+}
+
+section {
+  background: white;
+  color: black;
+  font: normal 13pt Arial;
+  width: 500px;
+  margin: 20px 420px;
+}
+
+header {
+  font: normal 30pt Arial;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font: normal 30pt Arial;
+}
+
+div#d1 {
+  padding: 5px;
+}
+
+div#d2 {
+  padding: 5px;
+}
+
+div#d3 {
+  padding: 5px;
+  text-align: center;
+}
+
+div#d4 {
+  text-align: center;
+  padding: 5px;
+}
+
+div#d5 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  font-style: italic;
+}

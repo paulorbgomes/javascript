@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultório Odontológico</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Consultório Odontológico</h1>
+    <img src="consultorio.png" alt="" />
+    <p>
+      Paciente:
+      <input type="text" name="" id="nome" />
+      <input type="button" value="Adicionar" onclick="adicionar()" />
+      <input type="button" value="Urgência" onclick="urgencia()" />
+      <input type="button" value="Atender" onclick="atender()" />
+    </p>
+    <p id="resp1"></p>
+    <p id="resp2"></p>
+    <script>
+      var nome = window.document.getElementById("nome");
+      var resp1 = window.document.getElementById("resp1");
+      var resp2 = window.document.getElementById("resp2");
+      var pacientes = [];
+      var pos = 0;
+      var i = 0;
+      let lista = "";
+
+      function adicionar() {
+        pacientes.push(nome.value);
+        lista = lista + `${i + 1}. ` + `${pacientes[i]}` + "\n";
+        resp2.innerText = lista;
+        i = i + 1;
+      }
+
+      function atender() {
+        resp1.innerText = `Em Atendimento: ${pacientes[0]}`;
+        pacientes.shift();
+        let lista = "";
+        for (let i = 0; i < pacientes.length; i = i + 1) {
+          lista = lista + `${i + 1}. ` + `${pacientes[i]}` + "\n";
+        }
+        resp2.innerText = lista;
+      }
+
+      function urgencia() {
+        pacientes.unshift(nome.value);
+        let lista = "";
+        for (let i = 0; i < pacientes.length; i = i + 1) {
+          lista = lista + `${i + 1}. ` + `${pacientes[i]}` + "\n";
+        }
+        resp2.innerText = lista;
+      }
+    </script>
+  </body>
+</html>

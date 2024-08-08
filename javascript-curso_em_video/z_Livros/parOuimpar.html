@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Par ou Ímpar?</title>
+    <style>
+      header {
+        padding: 10px;
+        font: normal 25px Arial;
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Programa Par ou Ímpar</header>
+    <img src="numeros.png" alt="" />
+    <p>Número: <input type="number" name="" id="num" /></p>
+    <input type="button" value="Verificador Par ou Ímpar?" onclick="clicar()" />
+    <p id="saida"></p>
+  </body>
+  <script>
+    function clicar() {
+      var num = window.document.getElementById("num");
+      var resp = window.document.getElementById("saida");
+      if (Number(num.value) % 2 == 0) {
+        resp.innerHTML = `O número ${num.value} é <strong>PAR</strong>!`;
+      } else {
+        resp.innerHTML = `O número ${num.value} é <strong>ÍMPAR</strong>!`;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,29 @@
+<script>
+  const a = "20"; // a é uma string!
+  //const a = Number("20"); // a é uma string!
+  alert(`a: ${a}`);
+  alert(typeof a);
+
+  const b = 2 * a;
+  alert(b);
+  alert(typeof b);
+
+  const c = a / 2;
+  alert(c);
+  alert(typeof c);
+
+  const d = a - 2;
+  alert(d);
+  alert(typeof d);
+
+  const e = a + 2; // Somente a operação + é válida como string!
+  alert(`e: ${e}`);
+  alert(typeof e);
+
+  /* 
+  Conslusão: 
+     - Quando utilizamos o operador + de fato a string é tratada como string!
+     - Quando os outros operadores são utilizados (-, *, /) a variável é tratada
+       como Number!
+  */
+</script>
